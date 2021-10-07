@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Frontend Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Neste challenge você vai criar uma aplicação web do famoso jogo Jokenpo ou Pedra Papel Tesoura.
 
-## Available Scripts
+As regras do jogo são:
 
-In the project directory, you can run:
+    Se os dois jogares selecionarem a mesma jogada, é um empate
+    Pedra ganha de tesoura
+    Tesoura ganha de papel
+    Papel ganha de pedra
 
-### `npm start`
+Link do figma
+O que deve estar implementado
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    Placar do jogador
+    Possibilidade de selecionar sua própria jogada
+    Utilizar uma jogada aleatória por parte do desafiante
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+❗ Como deve estar implementado
 
-### `npm test`
+Requisitos obrigatórios de implementação:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    React
+    Typescript
 
-### `npm run build`
+Como pode estar implementado
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Recursos que podem ser utilizados para realizar a implementação:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Frameworks baseado em React como Next
+    Bibliotecas de componentes (Material, Bootstrap, Chakra, etc)
+    Redux, Mobx, etc
+    Bibliotecas de terceiros (axios, moment, date-fns, lodash, etc)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+❗ O que será avaliado
 
-### `npm run eject`
+    Priorização de implementação
+    Componentização
+    Manutenibilidade
+    Testabilidade
+    Forma de entrega conforme o proposto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+🍒 Ganha mais pontos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Terminar dentro do tempo
+    Responsividade (mobile-fist)
+    Implementar testes unitários
+    Implementar alguma forma de deploy
+    Persistência (pode ser em localStorage, ou firebase e afins)
+    Chamadas HTTP para server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Como entregar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A entrega será através de um fork, então você deve:
 
-## Learn More
+    Realizar um fork do repositório (não clone diretamente)
+    Implementar o teste no seu fork
+    Enviar um pull-request para este repositório
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+‼️ Atenção
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bastante atenção no processo de entrega, este é um critério de avaliação.
+Inspiração
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este desafio foi fortemente inspirado no desafio do Frontendmentor, disponível nesse link
+Divirta-se! 🚀
