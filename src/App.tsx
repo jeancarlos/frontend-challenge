@@ -6,6 +6,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import routes from './routes'
 import { ReactComponent as IconPaper } from './assets/icon-paper.svg'
 import reducer from './store/reducer'
+import { TPlayerState, TPlayerAction, TDispatchType } from './store/types'
 
 const store: Store<TPlayerState, TPlayerAction> & {
   dispatch: TDispatchType

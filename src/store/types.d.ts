@@ -1,15 +1,18 @@
-interface IPlayer {
+import { THands } from '../commons/constants/types'
+
+export interface IPlayer {
   name: string
   score: number
+  hand: THands
 }
 
-type TPlayerState = {
+export type TPlayerState = {
   players: IPlayer[]
 }
 
-type TPlayerAction = {
+export type TPlayerAction = {
   type: string
   player: IPlayer
 }
 
-type TDispatchType = (args: TPlayerAction) => TPlayerAction
+export type TDispatchType = (args: TPlayerAction) => TPlayerAction

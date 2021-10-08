@@ -1,27 +1,29 @@
-import React, { useEffect, useState, ReactNode } from 'react'
+import React, { useEffect, useState, useCallback, ReactNode } from 'react'
+import { useDispatch, shallowEqual, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Grid } from '@mui/material'
 import ScoreCard from '../../components/ScoreCard'
 import Wrapper from '../../components/Wrapper'
 import HandButton from '../../components/HandButton'
-import { hands } from '../../commons/constants/index'
+import { hands } from '../../commons/constants'
+import { addScore } from '../../store/actionCreators'
+import { IPlayer, TPlayerState } from '../../store/types'
 import { GridStyled, ProcessText, ButtonStyled } from './styles'
 import { gameLogic } from './helpers'
 
-
 const Results: React.FC = () => {
   const history = useHistory()
-  const selectedHand = hands.rock
-  const score = 0
+  const dispatch = useDispatch()
+  const players = useSelector((state: TPlayerState) => state.players, shallowEqual)
+  const selectedHand = players[0].hand
+  const score = players[0].score
   const [computerHand, setComputerHand] = useState(hands.none)
   const [gameWin, setGameWin] = useState(false)
   const delay = Math.floor(Math.random() * 1000)
 
   const goToStart = () => history.push('/')
 
-  /* useEffect(() => {
-    if (selectedHand === hands.none) goToStart()
-  }, [selectedHand]) */
+  const updatePlayer = useCallback((player: IPlayer) => dispatch(addScore(player)), [dispatch])
 
   useEffect(() => {
     setTimeout(() => {
@@ -33,6 +35,9 @@ const Results: React.FC = () => {
     }, delay)
   }, [])
 
+  useEffect(() => {
+    if (gameWin) updatePlayer(players[0])
+  }, [gameWin])
 
   const renderProcessText = (): ReactNode => {
     if (computerHand === hands.none) return <ProcessText>MACHINE IS<br />CHOOSING...</ProcessText>

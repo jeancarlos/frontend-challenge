@@ -7,5 +7,5 @@ export type TFabStyled = {
 export type THandButton = {
   hand: THands
   disabled?: boolean,
-  onClick?(): void
+  onClick?(hand: THands): void
 }
