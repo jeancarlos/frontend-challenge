@@ -1,11 +1,9 @@
 import React, { useState, useCallback } from 'react'
-import Card from '@mui/material/Card'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import { Card } from '@mui/material'
 import { ReactComponent as IconRock } from '../../assets/icon-rock.svg'
 import { ReactComponent as IconPaper } from '../../assets/icon-paper.svg'
 import { ReactComponent as IconScissors } from '../../assets/icon-scissors.svg'
-import { Main, FabStyled, GridButton } from './styles'
+import { Main, FabStyled, GridButton, GridStyled, ScoreText, ScoreNumText } from './styles'
 
 const Home: React.FC = () => {
   const [score, setScore] = useState(0)
@@ -15,10 +13,10 @@ const Home: React.FC = () => {
   return (
     <Main>
       <Card>
-        <Typography className="center-text">Score</Typography>
-        <Typography className="center-text">{score}</Typography>
+        <ScoreText align="center">SCORE</ScoreText>
+        <ScoreNumText align="center">{score}</ScoreNumText>
       </Card>
-      <Grid container justifyContent="space-around">
+      <GridStyled container justifyContent="space-around">
         <GridButton>
           <FabStyled hand="rock" onClick={handleClick}><IconRock /></FabStyled>
         </GridButton>
@@ -28,7 +26,7 @@ const Home: React.FC = () => {
         <GridButton>
           <FabStyled hand="scissor" onClick={handleClick}><IconScissors /></FabStyled>
         </GridButton>
-      </Grid>
+      </GridStyled>
     </Main >
   )
 }
