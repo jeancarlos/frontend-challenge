@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import Fab from '@mui/material/Fab'
+import { TFabStyled } from './types'
+import { hands } from './constant'
 
 export const Main = styled.div`
   margin: 0 auto;
@@ -7,10 +9,10 @@ export const Main = styled.div`
   max-width: 819px;
 `
 
-export const FabStyled = styled(Fab)`
+export const FabStyled = styled(Fab)<TFabStyled>`
   && {
     background: #fff;
-    border: ${({ color }) => color} 16px solid;
+    border: ${({ hand }) => hands[hand] } 16px solid;
     height: 130px;
     width: 130px;
   }
